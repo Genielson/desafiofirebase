@@ -18,7 +18,7 @@ class SignActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign)
 
-        val mAuth = FirebaseAuth.getInstance()
+        val authenticate = FirebaseAuth.getInstance()
 
         createAccountClick()
 
