@@ -91,7 +91,7 @@ class RegisterAGameActivity : AppCompatActivity() {
                 if (_imageURI == _firstImageURI) {
                     saveGame(nameCreated, dateCreated, descriptionCreated)
                 } else {
-                    enviarImagemEArmazenarNoDb(nameCreated, dateCreated, descriptionCreated)
+                    sendImageDatabase(nameCreated, dateCreated, descriptionCreated)
                 }
             }
         } else {
@@ -115,7 +115,7 @@ class RegisterAGameActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.imageUpload).visibility = View.GONE
     }
 
-    private fun enviarImagemEArmazenarNoDb(nome: String, data: String, descricao: String) {
+    private fun sendImageDatabase(nome: String, data: String, descricao: String) {
         _imageURI?.run {
 
             val user = FirebaseAuth.getInstance().currentUser
