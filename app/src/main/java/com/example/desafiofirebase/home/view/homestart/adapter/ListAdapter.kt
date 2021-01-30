@@ -1,4 +1,4 @@
-package com.example.desafiofirebase.listadejogos.adapter
+package com.example.desafiofirebase.home.adapter
 
 import android.view.LayoutInflater
 import android.view.View

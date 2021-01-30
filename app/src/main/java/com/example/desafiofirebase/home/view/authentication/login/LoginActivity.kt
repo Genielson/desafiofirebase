@@ -1,4 +1,4 @@
-package com.example.desafiofirebase.auth.login
+package com.example.desafiofirebase.authenticate.login
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,7 @@ import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.desafiofirebase.R
-import com.example.desafiofirebase.auth.sign.SignActivity
+import com.example.desafiofirebase.authenticate.sign.SignActivity
 import com.example.desafiofirebase.listadejogos.HomeActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText

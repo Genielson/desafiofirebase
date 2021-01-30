@@ -1,4 +1,4 @@
-package com.example.desafiofirebase.auth.sign
+package com.example.desafiofirebase.authenticate.sign
 
 import android.content.Intent
 import android.os.Bundle
