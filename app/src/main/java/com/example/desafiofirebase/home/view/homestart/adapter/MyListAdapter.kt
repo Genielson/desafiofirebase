@@ -11,8 +11,8 @@ import com.example.desafiofirebase.model.MyGameModel
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 
-class ListAdapter(private val list: MutableList<MyGameModel>, private val listener: (MyGameModel) -> Unit
-) : RecyclerView.Adapter<ListAdapter.MyListViewHolder>() {
+class MyListAdapter(private val list: MutableList<MyGameModel>, private val listener: (MyGameModel) -> Unit
+) : RecyclerView.Adapter<MyListAdapter.MyListViewHolder>() {
 
     class MyListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 

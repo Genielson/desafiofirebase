@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.desafiofirebase.R
 import com.example.desafiofirebase.creategame.RegisterAGameActivity
 import com.example.desafiofirebase.detalhesjogo.InfoGameActivity
-import com.example.desafiofirebase.listadejogos.adapter.ListAdapter
+import com.example.desafiofirebase.home.adapter.MyListAdapter
 import com.example.desafiofirebase.model.MyGameModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener
 class HomeActivity : AppCompatActivity() {
 
     private var _myList = mutableListOf<MyGameModel>()
-    private lateinit var _adapter: ListAdapter
+    private lateinit var _adapter: MyListAdapter
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,7 +69,7 @@ class HomeActivity : AppCompatActivity() {
 
         if (_myList.isNotEmpty()) {
 
-            _adapter = ListAdapter(_myList) {
+            _adapter = MyListAdapter(_myList) {
                     val intent = Intent(this, InfoGameActivity::class.java)
 
                     intent.putExtra("dateCreated", it.dateCreated)
