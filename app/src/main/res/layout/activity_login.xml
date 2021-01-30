@@ -5,16 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash_screen"
-    tools:context=".auth.login.LoginActivity">
-
+    tools:context=".authenticate.login.LoginActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_10"
-        android:layout_marginEnd="@dimen/dimen_10"
+        app:cardCornerRadius="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_12"
+        android:layout_marginEnd="@dimen/dimen_12"
         app:cardBackgroundColor="@color/color_white"
-        app:cardCornerRadius="@dimen/dimen_6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +22,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/dimen_6"
+            android:layout_marginTop="@dimen/dimen_8"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="13dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
@@ -35,7 +34,7 @@
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtLoginEmail"
+                    android:id="@+id/edtEmailLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -47,21 +46,21 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_8"
                 android:hint="@string/password"
+                android:layout_marginTop="@dimen/dimen_10"
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtLoginPassword"
+                    android:id="@+id/edtPasswordLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:textColor="@color/textColor"
-                    android:textSize="@dimen/dimen_text_18" />
+                    android:textSize="@dimen/dimen_text_20" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/checkBoxRemember"
+                android:id="@+id/checkBoxRememberUser"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/remember"
@@ -70,7 +69,7 @@
 
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnLoginUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_32"
@@ -80,15 +79,16 @@
                 android:textSize="@dimen/dimen_text_18" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnCreateAccount"
+                android:id="@+id/btnCreateAccountUser"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textButton"
+                android:textSize="@dimen/dimen_text_18"
                 android:padding="10dp"
                 android:text="@string/create_account"
                 android:textAllCaps="false"
-                android:textColor="@color/textButton"
-                android:textSize="@dimen/dimen_text_16" />
+                 />
 
         </LinearLayout>
 

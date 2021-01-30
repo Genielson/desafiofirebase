@@ -16,9 +16,9 @@ class MyListAdapter(private val list: MutableList<MyGameModel>, private val list
 
     class MyListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        private val image = view.findViewById<ImageView>(R.id.imageViewJogo)
-        private val year = view.findViewById<TextView>(R.id.txtAnoJogo)
-        private val name = view.findViewById<TextView>(R.id.txtNomeJogo)
+        private val image = view.findViewById<ImageView>(R.id.imgViewGame)
+        private val year = view.findViewById<TextView>(R.id.txtYearDetails)
+        private val name = view.findViewById<TextView>(R.id.txtTitleGame)
 
         fun bind(mygame: MyGameModel) {
             name.text = mygame.name

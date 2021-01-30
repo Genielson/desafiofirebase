@@ -13,4 +13,8 @@
     <string name="enail_vazio">Preencha sua senha</string>
     <string name="email_vazio">Preencha seu email</string>
     <string name="password_vazio">Preencha sua senha</string>
+    <string name="password_warn_equals">Senhas não são iguais</string>
+    <string name="password_warning_caracteres">Senha tem que ter no minimo 6 caracteres</string>
+    <string name="email_warning_empty">O campo email não pode estar vazio</string>
+    <string name="name_warning_empty">O campo nome não pode estar vazio</string>
 </resources>

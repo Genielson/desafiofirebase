@@ -19,20 +19,20 @@ class InfoGameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_infogame)
 
-        val myContainer = findViewById<TextView>(R.id.txtJogoDescricaoDetalhes)
+        val myContainer = findViewById<TextView>(R.id.txtDetailsDescription)
         val name = intent.getStringExtra("name")!!
         val dateCreated = intent.getStringExtra("dateCreated")!!
         val description = intent.getStringExtra("description")!!
         val imgURL = intent.getStringExtra("imgURL")!!
 
-        findViewById<TextView>(R.id.txtNomeJogoTitulo).text = name
-        findViewById<TextView>(R.id.txtAnoJogoDetalhes).text = "Lançamento: $dateCreated"
-        findViewById<TextView>(R.id.txtNomeJogoDetalhes).text = name
+        findViewById<TextView>(R.id.txtTitleGame).text = name
+        findViewById<TextView>(R.id.txtYearDetails).text = "Lançamento: $dateCreated"
+        findViewById<TextView>(R.id.txtNameDetails).text = name
 
         myContainer.text = description
         myContainer.movementMethod = ScrollingMovementMethod()
 
-        loadingImageGame(imgURL, findViewById(R.id.imgViewJogoDetalhe))
+        loadingImageGame(imgURL, findViewById(R.id.imgViewDetails))
 
         findViewById<ImageView>(R.id.iconReturn).setOnClickListener {
             finish()
@@ -42,7 +42,7 @@ class InfoGameActivity : AppCompatActivity() {
     }
 
     private fun clicFloatButton(name:String,dateCreated:String,description:String,imgURL:String){
-        findViewById<FloatingActionButton>(R.id.btnEditar).setOnClickListener {
+        findViewById<FloatingActionButton>(R.id.btnEditGame).setOnClickListener {
             val intent = Intent(this, RegisterAGameActivity::class.java)
             intent.putExtra("name", name)
             intent.putExtra("dateCreated", dateCreated)

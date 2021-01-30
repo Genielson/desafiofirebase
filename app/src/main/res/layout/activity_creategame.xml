@@ -8,9 +8,8 @@
     android:padding="@dimen/dimen_8"
     tools:context=".creategame.RegisterAGameActivity">
 
-
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
+        android:id="@+id/MaterialcardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -96,7 +95,7 @@
         android:id="@+id/btnUpload"
         android:layout_width="@dimen/dimen_100"
         android:layout_height="@dimen/dimen_100"
-        android:layout_above="@+id/card"
+        android:layout_above="@+id/MaterialcardView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-50dp"
         android:elevation="@dimen/dimen_100"
@@ -106,7 +105,7 @@
         android:id="@+id/imageUpload"
         android:layout_width="@dimen/dimen_40"
         android:layout_height="@dimen/dimen_40"
-        android:layout_above="@+id/card"
+        android:layout_above="@+id/MaterialcardView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-20dp"
         android:elevation="@dimen/dimen_150"
@@ -117,7 +116,7 @@
         android:id="@+id/imagemSelecionada"
         android:layout_width="@dimen/dimen_90"
         android:layout_height="@dimen/dimen_90"
-        android:layout_above="@+id/card"
+        android:layout_above="@+id/MaterialcardView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-45dp"
         android:elevation="@dimen/dimen_150"

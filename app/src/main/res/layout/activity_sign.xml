@@ -5,22 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash_screen"
-    tools:context=".auth.sign.SignActivity">
-
+    tools:context=".authenticate.login.LoginActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="@dimen/dimen_10"
-        app:cardBackgroundColor="@color/color_white"
-        app:cardCornerRadius="@dimen/dimen_6"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="@dimen/dimen_12"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="@dimen/dimen_10">
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/dimen_8"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="@dimen/dimen_12">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,12 +35,13 @@
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtName"
+                    android:id="@+id/edtUserName"
                     android:layout_width="match_parent"
+                    android:textSize="@dimen/dimen_text_20"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/textColor"
-                    android:textSize="@dimen/dimen_text_18" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -53,36 +53,38 @@
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtSignEmail"
+                    android:id="@+id/edtEmailSignUser"
                     android:layout_width="match_parent"
+                    android:textSize="@dimen/dimen_text_20"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/textColor"
-                    android:textSize="@dimen/dimen_text_18" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_10"
                 android:hint="@string/password"
                 app:boxBackgroundColor="@color/color_white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtSignPassword"
+                    android:id="@+id/edtPasswordSignUser"
                     android:layout_width="match_parent"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/dimen_text_20"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/dimen_text_18" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_10"
                 android:hint="@string/repeat_password"
                 app:boxBackgroundColor="@color/color_white">
 
@@ -96,15 +98,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnCreateAccountSign"
+                android:id="@+id/btnAccountRegisterUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_28"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/colorAccent"
                 android:padding="@dimen/dimen_10"
                 android:text="@string/create_account"
-                android:textSize="@dimen/dimen_text_16" />
-
+                android:textSize="@dimen/dimen_text_18" />
 
         </LinearLayout>
 

@@ -20,14 +20,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        findViewById<MaterialButton>(R.id.btnCreateAccount).setOnClickListener {
+        findViewById<MaterialButton>(R.id.btnCreateAccountUser).setOnClickListener {
             val intent = Intent(this, SignActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<MaterialButton>(R.id.btnLogin).setOnClickListener {
-            val emailContainer = findViewById<TextInputEditText>(R.id.edtLoginEmail)
-            val passwordContainer = findViewById<TextInputEditText>(R.id.edtLoginPassword)
+        findViewById<MaterialButton>(R.id.btnLoginUser).setOnClickListener {
+            val emailContainer = findViewById<TextInputEditText>(R.id.edtEmailLogin)
+            val passwordContainer = findViewById<TextInputEditText>(R.id.edtPasswordLogin)
 
             checkedLogin(emailContainer, passwordContainer)
         }
@@ -37,8 +37,8 @@ class LoginActivity : AppCompatActivity() {
         val password = preferences.getString("Senha", "")
 
         if (!email.isNullOrBlank() && !password.isNullOrBlank()) {
-            findViewById<TextInputEditText>(R.id.edtLoginEmail).setText(email)
-            findViewById<TextInputEditText>(R.id.edtLoginPassword).setText(password)
+            findViewById<TextInputEditText>(R.id.edtEmailLogin).setText(email)
+            findViewById<TextInputEditText>(R.id.edtPasswordLogin).setText(password)
         }
 
     }
@@ -54,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
 
         if (!email.isBlank()) {
             if (!password.isBlank()) {
-                val remember = findViewById<CheckBox>(R.id.checkBoxRemember).isChecked
+                val remember = findViewById<CheckBox>(R.id.checkBoxRememberUser).isChecked
 
                 val auth = FirebaseAuth.getInstance()
 

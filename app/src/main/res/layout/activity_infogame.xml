@@ -7,23 +7,23 @@
     tools:context=".detalhesjogo.InfoGameActivity">
 
     <ImageView
-        android:id="@+id/imgViewJogoDetalhe"
+        android:id="@+id/imgViewDetails"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_220"
-        android:scaleType="centerCrop"
+        android:layout_height="223dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
         tools:src="@drawable/splash_screen" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_220"
-        android:alpha="0.2"
-        android:background="#000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#000"
+         />
 
     <ImageView
         android:id="@+id/iconReturn"
@@ -35,23 +35,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtNomeJogoTitulo"
+        android:id="@+id/txtTitleGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_18"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgViewDetails"
+        app:layout_constraintStart_toStartOf="parent"
         android:fontFamily="@font/roboto"
         android:textColor="@color/color_white"
-        android:textSize="@dimen/dimen_text_28"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/imgViewJogoDetalhe"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="God of War" />
+        android:textSize="30sp"
+
+         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnEditar"
+        android:id="@+id/btnEditGame"
+        android:layout_marginEnd="20dp"
         android:layout_width="@dimen/dimen_60"
         android:layout_height="@dimen/dimen_60"
-        android:layout_marginEnd="@dimen/dimen_24"
         android:backgroundTint="@color/colorAccent"
         app:fabSize="normal"
         app:layout_constraintBottom_toTopOf="@id/linearDescription"
@@ -65,43 +66,44 @@
         android:id="@+id/linearDescription"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dimen_25"
-        android:orientation="vertical"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgViewJogoDetalhe">
+        app:layout_constraintTop_toBottomOf="@id/imgViewDetails"
+        android:orientation="vertical"
+        >
 
         <TextView
-            android:id="@+id/txtNomeJogoDetalhes"
+            android:id="@+id/txtNameDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_16"
             android:fontFamily="@font/roboto"
+            android:layout_marginStart="18dp"
             android:textColor="@color/tittle_text_color"
-            android:textSize="@dimen/dimen_text_20"
-            tools:text="God of War"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            android:textSize="23dp"
+            tools:text=""
+            android:layout_marginLeft="18dp" />
 
         <TextView
-            android:id="@+id/txtAnoJogoDetalhes"
+            android:id="@+id/txtYearDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginStart="18dp"
             android:fontFamily="@font/roboto"
             android:textColor="@color/inputHintColor"
-            android:textSize="@dimen/dimen_text_16"
+            android:textSize="15sp"
             tools:text="Lançamento: 2018"
-            android:layout_marginLeft="@dimen/dimen_16" />
+            android:layout_marginLeft="18dp" />
 
         <TextView
-            android:id="@+id/txtJogoDescricaoDetalhes"
+            android:id="@+id/txtDetailsDescription"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/dimen_16"
             android:layout_marginTop="@dimen/dimen_18"
             android:layout_marginEnd="@dimen/dimen_16"
             android:layout_marginBottom="@dimen/dimen_16"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_16"
             android:scrollbars="vertical" />
 
     </LinearLayout>

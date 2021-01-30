@@ -14,24 +14,24 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageViewJogo"
+            android:id="@+id/imgViewGame"
             android:layout_width="@dimen/dimen_180"
             android:layout_height="@dimen/dimen_140"
             android:scaleType="centerCrop"
             tools:src="@drawable/splash_screen" />
 
         <TextView
-            android:id="@+id/txtNomeJogo"
+            android:id="@+id/txtTitleGame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_10"
             android:layout_marginTop="@dimen/dimen_12"
             android:layout_marginEnd="@dimen/dimen_10"
             android:textColor="@color/tittle_text_color"
-            tools:text="NOME DO JOGUINHO" />
+            tools:text="Mortal Kombat" />
 
         <TextView
-            android:id="@+id/txtAnoJogo"
+            android:id="@+id/txtYearDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_10"

@@ -8,16 +8,6 @@
     android:padding="@dimen/dimen_8"
     tools:context=".listadejogos.HomeActivity">
 
-
-    <ImageView
-        android:id="@+id/iconLogout"
-        android:layout_width="@dimen/dimen_32"
-        android:layout_height="@dimen/dimen_32"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_exit_to_app_24px"
-        />
-
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
@@ -26,31 +16,31 @@
         android:layout_marginTop="@dimen/dimen_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iconLogout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewGames"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dimen_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchView"
+        android:layout_marginTop="@dimen/dimen_16"
         tools:listitem="@layout/item_listgame" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnRegistrarJogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dimen_12"
-        android:layout_marginBottom="@dimen/dimen_12"
-        android:backgroundTint="@color/colorAccent"
-        app:fabSize="normal"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
         app:srcCompat="@drawable/ic_baseline_add_24"
         app:tint="@color/color_white"
-        android:layout_marginRight="@dimen/dimen_12"
         tools:ignore="VectorDrawableCompat" />
 </androidx.constraintlayout.widget.ConstraintLayout>

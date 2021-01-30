@@ -26,12 +26,12 @@ class SignActivity : AppCompatActivity() {
 
     private fun createAccountClick(){
 
-        findViewById<MaterialButton>(R.id.btnCreateAccountSign).setOnClickListener {
+        findViewById<MaterialButton>(R.id.btnAccountRegisterUser).setOnClickListener {
 
-            val password = findViewById<TextInputEditText>(R.id.edtSignPassword)
+            val password = findViewById<TextInputEditText>(R.id.edtPasswordSignUser)
             val repeatPassword = findViewById<TextInputEditText>(R.id.edtRepeatPassword)
-            val name = findViewById<TextInputEditText>(R.id.edtName)
-            val email = findViewById<TextInputEditText>(R.id.edtSignEmail)
+            val name = findViewById<TextInputEditText>(R.id.edtUserName)
+            val email = findViewById<TextInputEditText>(R.id.edtEmailSignUser)
 
             verifyUserCreate( password, repeatPassword,name, email)
 
@@ -53,16 +53,16 @@ class SignActivity : AppCompatActivity() {
                     if (repeatText == passText) {
                         createUser(nameText, emailText, passText)
                     } else {
-                        repeatPassword.error = "Senhas não são iguais"
+                        repeatPassword.error = getString(R.string.password_warn_equals)
                     }
                 } else {
-                    password.error = "Senha tem que ter no minimo 6 caracteres"
+                    password.error = getString(R.string.password_warning_caracteres)
                 }
             } else {
-                email.error = "O campo email não pode estar vazio"
+                email.error = getString(R.string.email_warning_empty)
             }
         } else {
-            name.error = "O campo nome não pode estar vazio"
+            name.error = getString(R.string.name_warning_empty)
         }
     }
 
