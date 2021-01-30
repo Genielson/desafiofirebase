@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen_180"
+    android:layout_height="@dimen/dimen_210"
+    android:layout_margin="@dimen/dimen_6"
+    app:cardBackgroundColor="@color/color_white"
+    app:cardCornerRadius="@dimen/dimen_8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewJogo"
+            android:layout_width="@dimen/dimen_180"
+            android:layout_height="@dimen/dimen_140"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/splash_screen" />
+
+        <TextView
+            android:id="@+id/txtNomeJogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:textColor="@color/tittle_text_color"
+            tools:text="NOME DO JOGUINHO" />
+
+        <TextView
+            android:id="@+id/txtAnoJogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:textColor="@color/tittle_text_color"
+            tools:text="2010" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

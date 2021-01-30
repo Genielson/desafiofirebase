@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detalhesjogo.InfoGameActivity">
+
+    <ImageView
+        android:id="@+id/imgViewJogoDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_220"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/splash_screen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_220"
+        android:alpha="0.2"
+        android:background="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconReturn"
+        android:layout_width="@dimen/dimen_38"
+        android:layout_height="@dimen/dimen_38"
+        android:layout_margin="@dimen/dimen_12"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNomeJogoTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_18"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_text_28"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgViewJogoDetalhe"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="God of War" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnEditar"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_60"
+        android:layout_marginEnd="@dimen/dimen_24"
+        android:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@id/linearDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_edit_24"
+        app:tint="@color/color_white"
+        android:layout_marginRight="@dimen/dimen_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <LinearLayout
+        android:id="@+id/linearDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgViewJogoDetalhe">
+
+        <TextView
+            android:id="@+id/txtNomeJogoDetalhes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/tittle_text_color"
+            android:textSize="@dimen/dimen_text_20"
+            tools:text="God of War"
+            android:layout_marginLeft="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/txtAnoJogoDetalhes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/inputHintColor"
+            android:textSize="@dimen/dimen_text_16"
+            tools:text="Lançamento: 2018"
+            android:layout_marginLeft="@dimen/dimen_16" />
+
+        <TextView
+            android:id="@+id/txtJogoDescricaoDetalhes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

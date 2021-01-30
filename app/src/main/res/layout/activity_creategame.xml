@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen"
+    android:padding="@dimen/dimen_8"
+    tools:context=".creategame.RegisterAGameActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nome"
+                android:textColor="@color/inputHintColor"
+                android:textSize="@dimen/dimen_text_20" />
+
+            <EditText
+                android:id="@+id/edtNameJogo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:backgroundTint="@color/inputHintColor"
+                android:inputType="text"
+                android:textColor="@color/textColor"
+                android:textCursorDrawable="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:text="@string/created_at"
+                android:textColor="@color/inputHintColor"
+                android:textSize="@dimen/dimen_text_20" />
+
+            <EditText
+                android:id="@+id/edtDateJogo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:backgroundTint="@color/inputHintColor"
+                android:inputType="text"
+                android:textColor="@color/textColor"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:text="@string/description"
+                android:textColor="@color/inputHintColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtDescriptionOfTheGame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_120"
+                android:backgroundTint="@color/inputHintColor"
+                android:inputType="textMultiLine"
+                android:textColor="@color/textColor"
+                android:textCursorDrawable="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="@dimen/dimen_10"
+                android:text="@string/save_game"
+                android:textSize="@dimen/dimen_text_18" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.mikhaellopez.circleview.CircleView
+        android:id="@+id/btnUpload"
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_above="@+id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50dp"
+        android:elevation="@dimen/dimen_100"
+        app:cv_color="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/imageUpload"
+        android:layout_width="@dimen/dimen_40"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_above="@+id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-20dp"
+        android:elevation="@dimen/dimen_150"
+        android:src="@drawable/ic_baseline_camera_alt_24"
+        tools:visibility="gone" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imagemSelecionada"
+        android:layout_width="@dimen/dimen_90"
+        android:layout_height="@dimen/dimen_90"
+        android:layout_above="@+id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-45dp"
+        android:elevation="@dimen/dimen_150"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+</RelativeLayout>
